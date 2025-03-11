@@ -1,0 +1,5 @@
+Flask
+openai
+python-dotenv
+requests
+selenium

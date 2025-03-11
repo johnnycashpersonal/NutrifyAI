@@ -1,0 +1,1070 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.5;
+}
+
+/* Main container */
+.nutrify-container {
+  display: flex;
+  height: 100vh;
+  background-color: #000;
+  color: white;
+}
+
+/* Simplified sidebar styles */
+.sidebar {
+  width: 250px;
+  background-color: #0c0c0c;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.sidebar-header {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.logo-container {
+  width: 28px;
+  height: 28px;
+  background-color: #22c55e;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-text {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.dropdown-icon {
+  margin-left: auto;
+  opacity: 0.6;
+}
+
+/* Horizontal navigation menu */
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* History sections */
+.history-container {
+  padding: 0 20px;
+}
+
+.history-title {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.history-item {
+  width: 100%;
+  text-align: left;
+  padding: 8px 12px;
+  font-size: 14px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.history-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 20px 0;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 20px;
+}
+
+.upgrade-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.upgrade-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Main content styles */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+/* Profile button */
+.profile-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.profile-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.profile-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 240px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.profile-header {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-email {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 4px;
+}
+
+.profile-section {
+  padding: 8px 0;
+}
+
+.profile-option {
+  width: 100%;
+  text-align: left;
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.profile-option:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Chat/input area */
+.chat-area {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Main heading with gradient */
+.main-heading {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+  background: linear-gradient(90deg, #22c55e, #0073D3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.2;
+}
+
+.center-query-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.center-input-wrapper {
+  position: relative;
+  margin-top: 20px;
+}
+
+.center-text-input {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 16px 20px;
+  padding-right: 80px;
+  color: white;
+  font-size: 16px;
+}
+
+.center-text-input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.center-input-buttons {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  margin-left: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.icon-button:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.disclaimer-container {
+  width: 100%;
+  padding: 12px 16px;
+  margin-top: 40px;
+}
+
+.disclaimer {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Recipe details view */
+.recipe-details {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  overflow-y: auto;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.back-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.recipe-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #22c55e, #0073D3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.recipe-content {
+  display: flex;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .recipe-content {
+    flex-direction: column;
+  }
+}
+
+.ingredients-section, 
+.instructions-section {
+  flex: 1;
+}
+
+.ingredients-section h2,
+.instructions-section h2 {
+  margin-bottom: 16px;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ingredients-list {
+  margin-bottom: 24px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.ingredient-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 79, 79, 0.1);
+}
+
+.ingredient-item:last-child {
+  border-bottom: none;
+}
+
+.ingredient-item.in-pantry {
+  background-color: rgba(34, 197, 94, 0.1);
+}
+
+.ingredient-item.needed {
+  background-color: rgba(255, 79, 79, 0.1);
+}
+
+.ingredient-name {
+  flex: 1;
+  font-weight: 500;
+}
+
+.ingredient-amount {
+  flex: 1;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ingredient-status {
+  flex: 1;
+  text-align: right;
+  font-size: 13px;
+}
+
+.ingredient-item.in-pantry .ingredient-status {
+  color: #22c55e;
+}
+
+.ingredient-item.needed .ingredient-status {
+  color: #ff4f4f;
+}
+
+.missing-ingredients {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.missing-ingredients h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.grocery-options {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.grocery-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.1s ease;
+}
+
+.grocery-button:hover {
+  transform: translateY(-2px);
+}
+
+.grocery-button.instacart {
+  background-color: #F95700;
+  color: white;
+}
+
+.grocery-button.kroger {
+  background-color: #0073D3;
+  color: white;
+}
+
+.instructions-list {
+  padding-left: 24px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.instruction-step {
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.save-recipe-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: #22c55e;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 30px;
+}
+
+.save-recipe-button:hover {
+  background-color: #1da04b;
+}
+
+/* Past Recipes View */
+.past-recipes {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  overflow-y: auto;
+}
+
+.past-recipes-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #22c55e, #0073D3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.recipe-history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.recipe-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.recipe-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.recipe-card-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.recipe-date {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.recipe-description {
+  margin-bottom: 20px;
+  flex-grow: 1;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+.recipe-card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.card-action-button {
+  flex: 1;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.2s ease;
+}
+
+.card-action-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Add ingredient button and form styles */
+.ingredients-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.add-ingredient-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background-color: rgba(34, 197, 94, 0.2);
+  border: none;
+  color: #22c55e;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.add-ingredient-button:hover {
+  background-color: rgba(34, 197, 94, 0.3);
+}
+
+.add-ingredient-form {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.ingredient-input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: white;
+}
+
+.ingredient-input:focus {
+  outline: none;
+  border-color: #22c55e;
+}
+
+.ingredient-form-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.add-button, .cancel-button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.add-button {
+  background-color: #22c55e;
+  color: white;
+}
+
+.cancel-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* Ingredient actions styles */
+.ingredient-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: 12px;
+}
+
+.confirm-button, .remove-button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.confirm-button {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+.confirm-button:hover {
+  background-color: rgba(34, 197, 94, 0.4);
+}
+
+.confirm-button.confirmed {
+  background-color: #22c55e;
+  color: white;
+}
+
+.remove-button {
+  background-color: rgba(255, 79, 79, 0.2);
+  color: #ff4f4f;
+}
+
+.remove-button:hover {
+  background-color: rgba(255, 79, 79, 0.4);
+}
+
+/* Update ingredient item to accommodate new buttons */
+.ingredient-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ingredient-name {
+  flex: 1.5;
+  font-weight: 500;
+}
+
+.ingredient-amount {
+  flex: 1;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ingredient-status {
+  flex: 1;
+  text-align: right;
+  font-size: 13px;
+}
+
+/* Confirmed ingredient style */
+.ingredient-item.confirmed {
+  background-color: rgba(34, 197, 94, 0.15);
+}
+
+/* Updated kroger button to be full width since we removed instacart */
+.grocery-options {
+  display: block;
+  margin-top: 20px;
+}
+
+.grocery-button.kroger {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Recipe Chat Styles */
+.recipe-chat-container {
+  margin-top: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.recipe-chat-container h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.chat-help-text {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.chat-history {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.chat-history::-webkit-scrollbar {
+  width: 4px;
+}
+
+.chat-history::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.chat-history::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+}
+
+.chat-message {
+  padding: 10px 14px;
+  border-radius: 12px;
+  max-width: 85%;
+  word-break: break-word;
+}
+
+.chat-message.user {
+  background-color: #0073D3;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.chat-message.system {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.chat-message.error {
+  background-color: rgba(255, 79, 79, 0.2);
+  color: #ff7979;
+}
+
+.chat-input-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 12px 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+}
+
+.chat-input:focus {
+  outline: none;
+  border-color: #22c55e;
+}
+
+.chat-send-button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.chat-send-button:hover {
+  background-color: #1da04b;
+}
+
+.chat-send-button:disabled {
+  background-color: rgba(34, 197, 94, 0.5);
+  cursor: not-allowed;
+}
+
+.chat-loading-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Remove add ingredient button styles and modifications */
+.ingredients-header {
+  margin-bottom: 16px;
+}
+
+/* Updated input container and button for consistency */
+.chat-input-container {
+  position: relative;
+}
+
+.chat-send-button {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.chat-input {
+  padding-right: 44px;
+}
+
+
+.cart-status-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.cart-status-box {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 420px;
+  padding: 28px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slideUp 0.4s ease-out;
+}
+
+.cart-status-box h3 {
+  margin: 16px 0 8px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.cart-status-box p {
+  margin: 8px 0;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.cart-status-box.adding {
+  border-top: 4px solid #4a90e2;
+}
+
+.cart-status-box.success {
+  border-top: 4px solid #4caf50;
+}
+
+.cart-status-box.error {
+  border-top: 4px solid #f44336;
+}
+
+/* Loading animation */
+.loading-animation {
+  margin: 16px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.cart-loader {
+  width: 48px;
+  height: 48px;
+  border: 3px solid #e0e0e0;
+  border-top: 3px solid #4a90e2;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  margin: 16px 0;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0;
+  background-color: #4a90e2;
+  animation: progress 2s infinite ease-in-out;
+}
+
+/* Status icons */
+.status-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin: 8px 0 16px;
+}
+
+.status-icon.success {
+  background-color: rgba(76, 175, 80, 0.15);
+  color: #4caf50;
+}
+
+.status-icon.error {
+  background-color: rgba(244, 67, 54, 0.15);
+  color: #f44336;
+}
+
+.error-detail {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 24px;
+  gap: 12px;
+}
+
+.primary-button, .secondary-button {
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.primary-button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+}
+
+.primary-button:hover {
+  background-color: #3a7bc8;
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: #555;
+  border: 1px solid #ddd;
+}
+
+.secondary-button:hover {
+  background-color: #f5f5f5;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes progress {
+  0% { width: 0%; }
+  50% { width: 70%; }
+  100% { width: 100%; }
+}
